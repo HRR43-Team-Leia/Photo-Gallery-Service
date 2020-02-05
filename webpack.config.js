@@ -1,13 +1,14 @@
 
-var path = require('path');
-var SRC_DIR = path.join(__dirname, '/src');
-var DIST_DIR = path.join(__dirname, '/public');
+const path = require('path');
+
+const SRC_DIR = path.join(__dirname, '/src');
+const DIST_DIR = path.join(__dirname, '/public');
 
 module.exports = {
   entry: `${SRC_DIR}/index.jsx`,
   output: {
     filename: 'bundle.js',
-    path: DIST_DIR
+    path: DIST_DIR,
   },
   module: {
     rules: [
@@ -21,7 +22,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-      }
-    ]
-  }
+      },
+    ],
+  },
 };

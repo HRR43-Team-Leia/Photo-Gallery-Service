@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 const mysql = require('mysql');
 const config = require('../config/config.js');

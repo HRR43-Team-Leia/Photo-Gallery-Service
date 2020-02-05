@@ -1,17 +1,14 @@
 const express = require('express');
 
 const app = express();
-const bodyParser = require('body-parser');
 const db = require('../database/index.jsx');
 
 const port = process.env.PORT || 3003;
 
-
 app.use(express.static('./public'));
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json());
 
 app.engine('html', require('ejs').renderFile);
+
 
 app.get('/:id', (req, res) => {
   res.render('../public/index.html');

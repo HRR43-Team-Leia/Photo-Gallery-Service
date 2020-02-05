@@ -1,4 +1,3 @@
-
 const faker = require('faker');
 const db = require('./index.jsx');
 
@@ -9,7 +8,6 @@ function getRandomInt(min1, max1) {
 }
 
 const seedData = () => {
-
   for (let ex = 1; ex < 101; ex += 1) {
     const photoCount = getRandomInt(9, 21);
     for (let k = 1; k <= photoCount; k += 1) {
